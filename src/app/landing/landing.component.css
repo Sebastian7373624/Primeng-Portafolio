@@ -1,0 +1,19 @@
+.landing {
+  background: linear-gradient(to right, #1e1e1e, #333);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00ffcc;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+.intro-text h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-size: 1em;
+}

@@ -1,0 +1,16 @@
+.blog {
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.blog h2 {
+  color: #00ffff;
+}
+
+.post {
+  border-left: 4px solid #00ffff;
+  padding-left: 20px;
+  margin-top: 20px;
+}
