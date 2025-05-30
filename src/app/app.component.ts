@@ -8,7 +8,7 @@ import { BlogComponent } from "./blog/blog.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FooterComponent, LandingComponent, AboutComponent, BlogComponent],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
