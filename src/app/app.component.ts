@@ -12,6 +12,15 @@ import { BlogComponent } from "./blog/blog.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
-  title = 'backend-primeng';
+  mostrarDetallesVisible = false;
+
+  mostrarDetalles() {
+    this.mostrarDetallesVisible = true;
+  }
+
+  mostrarPrincipal() {
+    this.mostrarDetallesVisible = false;
+  }
 }

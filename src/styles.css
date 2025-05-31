@@ -16,13 +16,13 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-    background-image: url('/assets/images/cachon.jpg'); /* direccion de la imagen que descargue y utilice para la cabecera del portafolio */
-
+  background-image: url('/assets/images/cachon.jpg'); /* imagen de fondo cabecera */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   filter: brightness(0.4);
   z-index: 0;
+  background-attachment: fixed; /* efecto parallax */
 }
 
 header h1 {
@@ -32,7 +32,12 @@ header h1 {
   padding: 10px 30px;
   border-radius: 10px;
   font-size: 2.5rem;
+
+  animation: fadeSlideIn 1.2s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
 }
+
 /* Borde negro para aside (Sobre mí y Contacto) */
 aside {
   border: 2px solid black;
@@ -50,20 +55,183 @@ aside {
 #contacto form {
   border: 2px solid black;
   border-radius: 8px;
-  padding: 20px 30px; /* menos padding vertical, más horizontal */
+  padding: 20px 30px; /* padding vertical y horizontal */
   background-color: #f4f4f4;
-  max-width: 500px; /* más ancho */
+  max-width: 500px;
   width: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* animación hover */
+}
+
+#contacto form:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
 }
 
 #contacto textarea {
-  height: 80px; /* menos alto */
-  resize: none; /* opcional, para evitar redimensionamiento */
+  height: 80px;
+  resize: none; /* evitar redimensionar */
 }
-
 
 /* Separación entre cada ítem de la lista de juegos */
 #blog ul li {
   margin-bottom: 20px;
 }
 
+/* Animación fadeSlideIn para header h1 */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación para botones */
+button, input[type="submit"] {
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+/* --- Animación para imágenes que reaccionan al cursor con solo CSS --- */
+.interactive-img {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px; /* opcional: bordes redondeados para mejor look */
+}
+
+.interactive-img:hover {
+  transform: scale(1.05); /* agranda la imagen */
+  box-shadow: 0 8px 20px rgba(0, 255, 204, 0.4); /* sombra suave de color turquesa */
+}
+
+/* Botón toggle */
+.btn-toggle {
+  padding: 12px 20px;
+  margin: 10px;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-toggle:hover {
+  background-color: #e64a19;
+}
+
+/* Contenedor principal del formulario */
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Títulos */
+form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Etiquetas */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Campos de entrada */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Botones */
+form button,
+form input[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* Ajuste para secciones dentro del formulario si existen */
+form .form-section {
+  margin-bottom: 25px;
+}
+
+/* Para mensajes de error o información */
+form .mensaje {
+  font-size: 14px;
+  color: #e74c3c;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.habilidades-tecnologias {
+  background: linear-gradient(135deg, #112e84, #246270);
+  color: white;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 204, 136, 0.4);
+  margin-top: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.habilidades-tecnologias:hover {
+  animation: bounce 0.5s ease;
+  box-shadow: 0 0 25px rgba(0, 255, 170, 0.8);
+  transform: scale(1.05);
+}
+
+/* Ya tienes definido el @keyframes bounce */
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}

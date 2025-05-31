@@ -1,147 +1,402 @@
-<!-- app.component.html -->
-
-<!-- Encabezado principal con imagen de fondo -->
+<!-- Encabezado principal -->
 <header id="inicio" style="background-image: url('assets/images/17010chghfg-1024x576.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 250px; display: flex; justify-content: center; align-items: center; color: white; text-align: center; font-family: 'Segoe UI', sans-serif;">
-    <h1 style="background: rgba(0, 0, 0, 0.6); padding: 10px 30px; border-radius: 10px; font-size: 2.5rem;">Bienvenido a mi blog profesional</h1> 
+  <h1 style="background: rgba(0, 0, 0, 0.6); padding: 10px 30px; border-radius: 10px; font-size: 2.5rem;">Bienvenido a mi blog profesional</h1>
 </header>
 
-<!-- Menú de navegación -->
+<!-- Navegación -->
 <nav style="background-color: #111; padding: 10px 0; font-family: 'Segoe UI', sans-serif; position: sticky; top: 0; z-index: 100;">
-    <ul style="list-style: none; display: flex; justify-content: center; gap: 30px; margin: 0; padding: 0;">
-        <li><a href="#inicio" style="color: white; text-decoration: none;">Inicio</a></li>
-        <li><a href="#sobre-mi" style="color: white; text-decoration: none;">Sobre Mí</a></li>
-        <li><a href="#blog" style="color: white; text-decoration: none;">Blog</a></li>
-        <li><a href="#contacto" style="color: white; text-decoration: none;">Contacto</a></li>
-    </ul>
+  <ul style="list-style: none; display: flex; justify-content: center; gap: 30px; margin: 0; padding: 0;">
+    <li><a href="#inicio" class="nav-btn">Inicio</a></li>
+    <li><a href="#sobre-mi" class="nav-btn">Sobre Mí</a></li>
+    <li><a href="#blog" class="nav-btn">Blog</a></li>
+    <li><a href="#contacto" class="nav-btn">Contacto</a></li>
+  </ul>
 </nav>
 
-<!-- Contenedor principal del portafolio-->
-<div style="display: flex; flex-direction: row; font-family: 'Segoe UI', sans-serif;">
+<style>
+  .nav-btn {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    display: inline-block;
+  }
 
-    <!-- Aside: Sobre Mí -->
-    <aside style="width: 40%; background-color: #f4f4f4; padding: 30px;" id="sobre-mi"> <!--personalizacion-->
-        <h2 style="color: #333; border-bottom: 4px solid #ccc; padding-bottom: 5px;">Sobre Mí</h2>
-        <p style="margin-top: 10px;">
-            Hola, soy <strong>Sebastian Quintero Montoya</strong>, un apasionado de los videojuegos competitivos, amante de los drones, curioso por la tecnología y entusiasta del desarrollo de software y videojuegos online.
-        </p>
+  .nav-btn:hover, 
+  .nav-btn:focus {
+    background-color: #00cc88;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 204, 136, 0.6);
+  }
+</style>
 
-        <h3 style="margin-top: 30px; color: #444;">Contacto</h3>
-        <ul style="list-style: none; padding: 0; line-height: 1.8;">
-            <li><strong>Ciudad:</strong> Pereira</li>
-            <li><strong>Dirección:</strong> Avenida del Río</li>
-            <li><strong>Email:</strong> <a href="mailto:gamer.pro@esportsmail.com">gamer.pro-esportsmail.com</a></li>
-            <li><strong>Email alterno:</strong> <a href="mailto:contacto@blogprogaming.com">contacto-blogprogaming.com</a></li>
-            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
 
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+<!-- Contenido principal -->
+<div id="vista-principal" style="display: flex; flex-direction: row; font-family: 'Segoe UI', sans-serif;">
 
-            <li><a href="https://github.com" target="_blank">GitHub</a></li>
-        </ul>
+  <!-- Barra lateral -->
+  <aside style="width: 40%; background-color: #f4f4f4; padding: 30px;" id="sobre-mi">
+    <h2 style="color: #333; border-bottom: 4px solid #ccc; padding-bottom: 5px;">Sobre Mí</h2>
+ <section id="sobre-mi" style="display: flex; justify-content: center; margin: 60px 0;">
+  <div style="
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 40px;
+    max-width: 700px;
+    width: 100%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+  " onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'">
+    
+    <div style="
+      font-size: 70px;
+      color: #00b894;
+      margin-bottom: 20px;
+      animation: spin 6s linear infinite;
+    ">👤</div>
 
-        <h3 style="margin-top: 30px; color: #444;">Habilidades</h3>
-        <ul style="list-style: none; padding-left: 15px;">
-            <li>Redacción de análisis</li>
-            <li>Edición de video y streaming</li>
-            <li>Gestión de comunidades online</li>
-            <li>SEO básico para blogs</li>
-            <li>Conocimientos en programación (Python, JavaScript, etc)</li>
-        </ul>
+    <h2 style="font-size: 28px; color: #2d3436; margin-bottom: 20px;">Sobre mí</h2>
 
-<!-- Programas de Uso para contenido visual y de progrmacion -->
-        <h3 style="margin-top: 30px; color: #444;">Tecnologías que uso</h3>
-        <ul style="list-style: none; padding-left: 15px;">
+    <p style="font-size: 18px; color: #000000; margin-bottom: 10px;"><strong>Nombre:</strong> Sebastian Quintero Montoya</p>
+    <p style="font-size: 18px; color: #111212; margin-bottom: 10px;"><strong>Profesión:</strong> Desarrollador Web y Jugador Profesional de videojuegos Souls</p>
+    <p style="font-size: 18px; color: #000000; margin-bottom: 10px;"><strong>Ubicación:</strong> Pereira, Colombia</p>
+    <p style="font-size: 18px; color: #000000; margin-bottom: 20px;"><strong>Email:</strong> Sebas-email.com</p>
 
-            <li>OBS Studio</li>
-
-            <li>Visual Studio</li>
-
-            <li>Canva</li>
-
-            <li>WordPress</li>
-        </ul>
-        <img src="assets/images/istockphoto-1530256492-612x612.jpg" alt="Imagen" style="width: 100%; max-width: 500px; border-radius: 20px;">
-        <p style="margin-top: 15px; font-style: italic; color: #000000;"> </p>
-
-            "La pasión por los videojuegos es el motor que impulsa mi creatividad y mi deseo de compartir experiencias únicas con la comunidad ademass no solo en los videojuegos, sino también en la programación y el desarrollo de software ya que como sabemos ambos son parte fundamental de la industria del entretenimiento digital y van juntos de la mano"
-
-    </aside>
-
-    <!-- Main: Blog -->
-    <main style="width: 75%; background-color: #1a1a1a; color: white; padding: 40px;" id="blog">
-        <h2 style="color: #00ffcc;">Reflexiones, análisis y experiencias en el universo de los videojuegos competitivos</h2>
-        <p style="margin-top: 15px;">
-            ¿Por qué los videojuegos competitivos son el deporte del futuro?<br>
-            Desde el trabajo en equipo hasta el análisis estratégico, los esports están revolucionando la forma de competir digitalmente.
-        </p>
-<!-- Uso de colores y descripcion de lo juegos  -->
-        <h3 style="margin-top: 30px; color: #ffcc00;">Top 5 juegos para desarrollar reflejos y toma de decisiones</h3>
-        <ul>
-            <li>CS:GO</li>
-            <li>Tom Clancy's Rainbow Six Siege (R6)</li>
-            <li>Rocket League</li>
-            <li>Genshin Impact</li>
-        </ul>
- <!-- informacion detalla de cada juego y sus programas con los que fueron diseñados  -->
-        <h3 style="margin-top: 40px; color: #a9ff41;">Lenguajes de Programación de los Juegos</h3>
-        <ul>
-            <li><strong>CS:GO:</strong> C++ con Source Engine para eficiencia y rendimiento multijugador. está desarrollado en C++, un lenguaje ampliamente utilizado en la industria de los videojuegos debido a su alto rendimiento y control sobre el hardware. Este juego usa el Source Engine, que también está basado en C++. La elección de C++ permite una gestión eficiente de la memoria y optimización para partidas multijugador en línea</li>
-
-            <li><strong>R6:</strong> C++ y AnvilNext Engine, ideal para disparos tácticos en tiempo real.Rainbow Six Siege también está programado en C++, lo que le permite manejar gráficos avanzados y una jugabilidad fluida. Ubisoft desarrolló este juego con el AnvilNext Engine, un motor que ha sido utilizado en varios títulos de la compañía.C++ es ideal para juegos de disparos tácticos debido a su capacidad de procesamiento en tiempo real </li>
-
-            <li><strong>Rocket League:</strong> Unreal Engine con C++ para físicas realistas y rendimiento alto.Unreal Engine Rocket League está construido sobre Unreal Engine,un motor de juego que utiliza C++ como su lenguaje principal.Unreal Engine es conocido por su capacidad de renderizado avanzado y físicas realistas, lo que es crucial para un juego basado en vehículos y colisiones dinámicas</li>
-
-            <li><strong>Genshin Impact:</strong> Unity con C# para desarrollo multiplataforma optimizado.Unity (C#) Genshin Impact fue desarrollado con Unity, un motor de juego que usa C# como su lenguaje de programación principal. Unity es popular en el desarrollo de juegos multiplataforma, permitiendo que Genshin Impact funcione en PC, consolas y dispositivos móviles con una optimización eficiente</li>
-        </ul>
-
-        <h3 style="margin-top: 40px; color: #01ff63;">Mis Proyectos</h3>
-        <ul>
-            <li><strong>Reseñas semanales:</strong> Análisis críticos de juegos actuales</li>
-            <li><strong>Podcast "GameTalks":</strong> Conversaciones con profesionales de los esports</li>
-            <li><strong>Mini documental:</strong> Historia de un jugador competitivo colombiano</li>
-            <li><strong>Desarrollo de videojuegos:</strong> Análisis de código y avances en Unity</li>
-            <li><strong>Charla con los Devs:</strong> Proceso de desarrollo y algoritmos detrás del juego</li>
-        </ul>
-
-        <h3 style="margin-top: 40px; color: #00ffcc;">Galería</h3>
-        <p>Capturas de eventos, torneos y partidas destacadas:</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-            <img src="assets/images/fb_image.png" alt="Game-shooter" style="width: 100%; max-width: 300px;">
-            <img src="assets/images/Rainbow-Six-Siege-season-8-banner-750.jpg" alt="game-shooter" style="width: 100%; max-width: 300px;">
-            <img src="assets/images/RocketLeague.jpg" alt="competitivo" style="width: 100%; max-width: 300px;">
-            <img src="assets/images/genshin-impact.jpg" alt="Fantasia" style="width: 100%; max-width: 300px;">
-        </div>
-    </main>
-</div>
-
-<!-- Sección de Contacto -->
-<section style="background-color: #f4f4f4; padding: 40px; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center;" id="contacto">
-    <div style="width: 100%; max-width: 500px;">
-        <h2 style="text-align: center; color: #333;">Formulario de Contacto</h2>
-        <form style="margin-top: 20px;">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" style="width: 100%; margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required><br>
-
-            <label for="correo">Correo:</label><br>
-            <input type="email" id="correo" name="correo" style="width: 100%; margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required><br>
-
-            <label for="mensaje">Mensaje:</label><br>
-            <textarea id="mensaje" name="mensaje" rows="5" style="width: 100%; margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required></textarea><br>
-
-            <button type="submit" style="width: 100%; padding: 10px; background-color: #00b894; color: white; border: none; border-radius: 5px; font-weight: bold;">Enviar Mensaje</button>
-        </form>
-    </div>
+    <p style="font-size: 17px; color: #2d3436; margin-top: 20px; line-height: 1.6;">
+      Hola,<strong>Bienvenidos a mi portafolio-Pagina web personal</strong>, un apasionado de los videojuegos competitivos, amante de los drones, curioso por la tecnología y entusiasta del desarrollo de software y videojuegos online lo tipico que se podria decir de mi la verdad no soy una persona que tenga mucho que decir y ya
+      que sinceramente no tengo literalmente nada mas que agregar.
+    </p>
+  </div>
 </section>
 
-<!-- FOOTER: Derechos de autor y redes sociales -->
-<footer>
-    <div style="background-color: #222; padding: 60px; text-align: center; color: white; font-family: 'Segoe UI', sans-serif;">
-        <p>&copy; 2025 Blog Profesional de Videojuegos. Todos los derechos reservados.</p>
-        <p>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; margin: 0 10px;">Facebook</a> |
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; margin: 0 10px;">Twitter</a> |
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; margin: 0 10px;">GitHub</a>
-        </p>
+<style>
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
+
+<div style="
+  background: linear-gradient(135deg, #112e84, #246270); 
+  color: white; 
+  padding: 20px 25px; 
+  border-radius: 15px; 
+  box-shadow: 0 0 15px rgba(0, 204, 136, 0.4); 
+  margin-top: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  animation: aparecer 1s ease-out;
+">
+  <h3 style="margin-top: 0; font-size: 1.4rem; text-align: center;">Canales de contacto</h3>
+  <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: 1rem;">
+    <li class="contacto">Ciudad: Pereira</li>
+    <li class="contacto">Dirección: Avenida del Río</li>
+    <li class="contacto">Email principal: gamer.pro-esportsmail.com</li>
+    <li class="contacto">Email alterno: contacto-blogprogaming.com</li>
+    <li class="contacto">LinkedIn: sebastianquintero21</li>
+    <li class="contacto">Twitter: Montoya.com</li>
+    <li class="contacto">GitHub: Sebastian7373624</li>
+  </ul>
+</div>
+
+<!-- Ícono flotante de contacto -->
+<a href="#contacto" id="icono-contacto" style="
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #5fb340;
+  color: rgb(0, 0, 0);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgb(5, 167, 116);
+  text-decoration: none;
+  z-index: 999;
+  animation: flotar 2s infinite ease-in-out;
+  font-size: 28px;
+">
+  📩
+</a>
+
+<style>
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+</style>
+
+
+<style>
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contacto {
+  transition: transform 0.3s ease;
+}
+
+.contacto:hover {
+  animation: bounce 0.5s ease;
+}
+</style>
+
+
+<!-- Modal -->
+<div id="modal-contacto" style="
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  background: #222;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0f5709;
+  color: #0f5709;
+  width: 320px;
+  max-width: 90%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+">
+  <h3 style="margin-top: 0; margin-bottom: 15px; text-align: center;">Mis canales de contacto</h3>
+  <ul style="list-style: none; padding-left: 0; line-height: 1.6; font-size: 0.95rem;">
+    <li><strong>Ciudad:</strong> Pereira</li>
+    <li><strong>Dirección:</strong> Avenida del Río</li>
+    <li><strong>Email principal:</strong> <a href="mailto:gamer.pro@esportsmail.com" style="color:#183c33;">gamer.pro-esportsmail.com</a></li>
+    <li><strong>Email alterno:</strong> <a href="mailto:contacto@blogprogaming.com" style="color:#183c33;">contacto-blogprogaming.com</a></li>
+    <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="color:#183c33;">LinkedIn</a></li>
+    <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="color:#183c33;">Twitter</a></li>
+    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" style="color:#183c33;">GitHub</a></li>
+  </ul>
+  <button id="cerrar-modal" style="
+    margin-top: 20px;
+    background: #022719;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  ">Cerrar</button>
+</div>
+
+<!-- Fondo oscuro -->
+<div id="fondo-modal" style="
+  display: none;
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.6);
+  z-index: 900;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+"></div>
+
+<script>
+  const btnContacto = document.getElementById('btn-contacto');
+  const modal = document.getElementById('modal-contacto');
+  const fondo = document.getElementById('fondo-modal');
+  const btnCerrar = document.getElementById('cerrar-modal');
+
+  // Animación hover botón
+  btnContacto.addEventListener('mouseenter', () => {
+    btnContacto.style.transform = 'scale(1.1)';
+    btnContacto.style.boxShadow = '0 0 20px #00ffbb';
+  });
+  btnContacto.addEventListener('mouseleave', () => {
+    btnContacto.style.transform = 'scale(1)';
+    btnContacto.style.boxShadow = '0 0 10px #00cc88';
+  });
+
+  // Mostrar modal
+  btnContacto.addEventListener('click', () => {
+    modal.style.display = 'block';
+    fondo.style.display = 'block';
+
+    // Dar tiempo para animación
+    setTimeout(() => {
+      modal.style.opacity = '1';
+      modal.style.transform = 'translate(-50%, -50%) scale(1)';
+      fondo.style.opacity = '1';
+    }, 10);
+  });
+
+  // Cerrar modal
+  function cerrarModal() {
+    modal.style.opacity = '0';
+    modal.style.transform = 'translate(-50%, -50%) scale(0.7)';
+    fondo.style.opacity = '0';
+
+    setTimeout(() => {
+      modal.style.display = 'none';
+      fondo.style.display = 'none';
+    }, 300);
+  }
+
+  btnCerrar.addEventListener('click', cerrarModal);
+  fondo.addEventListener('click', cerrarModal);
+</script>
+
+
+   <div style="
+  background: linear-gradient(135deg, #1b1f3a, #3a506b); 
+  color: white;
+  padding: 20px; 
+  border-radius: 15px; 
+  margin-top: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  animation: aparecer 1s ease-out;
+">
+  <h3 style="margin-top: 0; font-size: 1.3rem; text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 5px;">🛠️ Habilidades</h3>
+  <ul style="list-style: none; padding-left: 20px; line-height: 1.7; margin: 15px 0;">
+    <li>✔️ Redacción de análisis</li>
+    <li>✔️ Edición de video y streaming</li>
+    <li>✔️ Gestión de comunidades online</li>
+    <li>✔️ SEO básico para blogs</li>
+    <li>✔️ Programación (Python, JavaScript, etc)</li>
+  </ul>
+
+  <h3 style="margin-top: 20px; font-size: 1.3rem; text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 5px;">💻 Tecnologías que uso</h3>
+  <ul style="list-style: none; padding-left: 20px; line-height: 1.7; margin: 15px 0;">
+    <li>💡 OBS Studio</li>
+    <li>💡 Visual Studio</li>
+    <li>💡 Canva</li>
+    <li>💡 WordPress</li>
+  </ul>
+</div>
+
+
+    <img src="assets/images/istockphoto-1530256492-612x612.jpg" class="galeria-img" alt="Imagen"  style="width: 100%; max-width: 500px; border-radius: 20px; margin-top: 20px;">
+    <p style="margin-top: 15px; font-style: italic; color: #000000;">
+      "La pasión por los videojuegos es el motor que impulsa mi creatividad y mi deseo de compartir experiencias únicas con la comunidad, no solo en los videojuegos, sino también en la programación y el desarrollo de software."
+    </p>
+  </aside>
+
+  <!-- Blog principal -->
+  <main style="width: 75%; background-color: #1a1a1a; color: white; padding: 40px;" id="blog">
+    <h2 style="color: #00ffcc;">Reflexiones, análisis y experiencias en el universo de los videojuegos competitivos</h2>
+    <p style="margin-top: 15px;">
+      ¿Por qué los videojuegos competitivos son el deporte del futuro?<br>
+      Desde el trabajo en equipo hasta el análisis estratégico, los esports están revolucionando la forma de competir digitalmente.
+    </p>
+
+    <h3 style="margin-top: 30px; color: #ffcc00;">Top 5 juegos para desarrollar reflejos y toma de decisiones</h3>
+    <ul>
+      <li>CS:GO</li>
+      <li>Tom Clancy's Rainbow Six Siege (R6)</li>
+      <li>Rocket League</li>
+      <li>Genshin Impact</li>
+    </ul>
+
+    <h3 style="margin-top: 40px; color: #a9ff41;">Lenguajes de Programación de los Juegos</h3>
+    <ul>
+      <li><strong>CS:GO:</strong> C++ con Source Engine.stá principalmente desarrollado en C++. También utiliza Squirrel, un lenguaje de scripting, para ciertas funcionalidades del juego. 
+Explicación detallada:
+C++:
+Es el lenguaje de programación principal que se utiliza para construir el motor del juego, la lógica central y las funciones de alto rendimiento. 
+Squirrel:
+Este lenguaje de scripting se utiliza para crear scripts que pueden personalizar la interfaz del juego, añadir nuevas funcionalidades, o modificar la experiencia del jugador. </li>
+      
+<li><strong>R6:</strong> C++ y AnvilNext Engine. Lenguaje de programación:
+Si bien el desarrollo principal se realiza en C++, también se utiliza Java para algunas partes del juego, específicamente para la red. 
+Motor de juego:
+AnvilNext 2.0 es un motor de juego propio de Ubisoft que permite gráficos y físicas avanzados, lo que incluye entornos destructibles y un alto nivel de detalle. 
+</li>
+      <li><strong>Rocket League:</strong> Unreal Engine con C++. l lenguaje de programación utilizado para desarrollar la mayor parte del motor de juego y la API. Además, se utiliza un lenguaje de scripting como Lua o Python para la lógica del juego y el contenido dinámico. El juego utiliza el motor de juego Unreal Engine 3 y la física Bullet Physics. 
+      </li>
+
+      <li><strong>Genshin Impact:</strong> Unity con C#.Explicación más detallada:
+C++:
+C++ es el lenguaje de programación principal utilizado para el desarrollo del motor de juego Unity, lo que incluye aspectos como el renderizado de gráficos y la gestión de la CPU y la memoria. 
+C#:
+C# es el lenguaje de scripting que se utiliza dentro de Unity para la creación de la lógica del juego, los eventos y los sistemas dinámicos. 
+Unity:
+Unity es el motor de juego que se utiliza para desarrollar Genshin Impact, y es un entorno que permite el desarrollo de juegos en diversas plataformas. 
+En resumen, C++ es el lenguaje de bajo nivel que sustenta el motor de juego Unity, mientras que C# se utiliza para la programación de la lógica del juego dentro de este entorno. </li>
+    </ul>
+
+    <h3 style="margin-top: 40px; color: #01ff63;">Mis Proyectos</h3>
+    <ul>
+      <li><strong>Reseñas semanales:</strong> Análisis de juegos actuales</li>
+      <li><strong>Podcast "GameTalks":</strong> Conversaciones con profesionales</li>
+      <li><strong>Mini documental:</strong> Historia de un jugador colombiano</li>
+      <li><strong>Desarrollo de videojuegos:</strong> Avances en Unity</li>
+      <li><strong>Charla con los Devs:</strong> Algoritmos y desarrollo de juegos</li>
+    </ul>
+
+    <h3 style="margin-top: 40px; color: #00ffcc;">Galería</h3>
+    <p>Capturas de eventos, torneos y partidas destacadas:</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <img src="assets/images/fb_image.png" alt="Game-shooter" class="galeria-img" style="width: 100%; max-width: 300px; border-radius: 10px;">
+      <img src="assets/images/Rainbow-Six-Siege-season-8-banner-750.jpg" alt="R6" class="galeria-img" style="width: 100%; max-width: 300px; border-radius: 10px;">
+      <img src="assets/images/RocketLeague.jpg" alt="Rocket League" class="galeria-img" style="width: 100%; max-width: 300px; border-radius: 10px;">
+      <img src="assets/images/genshin-impact.jpg" alt="Genshin Impact" class="galeria-img" style="width: 100%; max-width: 300px; border-radius: 10px;">
     </div>
+  </main>
+</div>
+
+<!-- Contacto -->
+<section id="contacto" style="padding: 10px; background-color: #322f2f; color: white; font-family: 'Segoe UI', sans-serif;">
+  <h2></h2>
+  <form style="display: flex; flex-direction: column; max-width: 700px;" onsubmit="event.preventDefault(); alert('Mensaje enviado!');">
+    <label for="nombre" style="margin-top: 15px;">Nombre</label>
+    <input type="text" id="nombre" name="nombre" required style="padding: 8px; margin-top: 5px;">
+
+    <label for="email" style="margin-top: 15px;">Correo Electrónico</label>
+    <input type="email" id="email" name="email" required style="padding: 8px; margin-top: 5px;">
+
+    <label for="mensaje" style="margin-top: 15px;">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="5" required style="padding: 8px; margin-top: 5px;"></textarea>
+
+    <button type="submit" style="margin-top: 20px; padding: 10px; background-color: #00cc88; color: white; border: none; cursor: pointer; border-radius: 5px;">
+      Enviar
+    </button>
+  </form>
+</section>
+
+<!-- Pie de página -->
+<footer style="background-color: #111; color: white; text-align: center; padding: 20px; font-family: 'Segoe UI', sans-serif;">
+  <p>&copy; 2025 Sebastian Quintero Montoya | Todos los derechos reservados</p>
+  <p>
+    Sígueme en 
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="color: #00cc88;">Twitter</a> y 
+    <a href="https://github.com" target="_blank" rel="noopener noreferrer" style="color: #00cc88;">GitHub</a>
+  </p>
 </footer>
 
+<!-- Estilos CSS para animaciones -->
+<style>
+  #blog .galeria-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
 
+  #blog .galeria-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.4);
+  }
+</style>
